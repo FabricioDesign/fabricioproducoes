@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- META TAGS ESSENCIAIS PARA SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <!-- TÍTULO OTIMIZADO PARA SEO -->
+    <title>FABRICIO PRODUÇÕES | Contrate Artistas para Seu Evento</title>
+    
+    <!-- META DESCRIPTION - MELHOR PARA BUSCA -->
+    <meta name="description" content="Casting oficial de artistas para shows. Curadoria premium de talentos: Sertanejo, Rap, MPB, Rock e mais. Intermediação profissional para eventos.">
+    <meta name="keywords" content="casting de artistas, contratação de shows, produção musical, sertanejo, rap, mpb, fabricio produções">
+    <meta name="author" content="Fabricio Produções">
+    <meta name="robots" content="index, follow">
+    
+    <!-- OPEN GRAPH - COMPARTILHAMENTO EM REDES SOCIAIS -->
+    <meta property="og:title" content="FABRICIO PRODUÇÕES - Contrate Artistas para Seu Evento">
+    <meta property="og:description" content="Hub oficial de artistas para shows. Curadoria premium e intermediação profissional.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fabricioproducoes.com.br">
+    <meta property="og:image" content="https://fabricioproducoes.com.br/img/og-image.jpg">
+    <meta property="og:site_name" content="Fabricio Produções">
+    
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FABRICIO PRODUÇÕES - Casting Oficial">
+    <meta name="twitter:description" content="Casting de artistas para shows. Contrate os melhores talentos.">
+    
+    <!-- FAVICON (IMPORTANTE PARA PROFISSIONALISMO) -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    
+    <!-- PRELOAD DO VÍDEO PARA MELHOR PERFORMANCE -->
+    <link rel="preload" href="video/compilado-artistas.mp4" as="video" type="video/mp4">
+
+    <style>
+        /* ---------- RESET / BASE - TEMA ESCURO PREMIUM ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* MELHORIA: Variáveis CSS para facilitar manutenção */
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #050507;
+            --bg-card: rgba(20, 20, 30, 0.6);
+            --bg-card-hover: rgba(30, 30, 40, 0.8);
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0b0;
+            --text-tertiary: #606070;
+            --border-light: rgba(255, 255, 255, 0.1);
+            --border-hover: rgba(255, 255, 255, 0.2);
+            --transition-smooth: all 0.4s cubic-bezier(0.2, 0.9, 0.3, 1);
+        }
+
+        html {
+            font-size: 16px;
+            scroll-padding-top: 20px; /* MELHORIA: Evita que o título fique escondido atrás do topo */
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            scroll-behavior: smooth;
+            overflow-x: hidden; /* MELHORIA: Evita scroll horizontal indesejado */
+        }
+
+        /* MELHORIA: Import da fonte Inter para tipografia mais premium */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        h1, h2, h3, p {
+            font-weight: 400;
+            letter-spacing: -0.015em;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 12vw, 5.5rem);
+            font-weight: 700; /* MELHORIA: Peso maior para mais impacto */
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        h2 {
+            font-size: clamp(2.2rem, 6vw, 2.8rem);
+            font-weight: 600; /* MELHORIA: Mais destaque */
+            letter-spacing: -0.02em;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+            position: relative;
+            display: inline-block;
+        }
+
+        /* MELHORIA: Linha decorativa sutil no título */
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+            width: 100%;
+        }
+
+        section {
+            padding: clamp(60px, 10vh, 100px) 0;
+        }
+
+        /* ---------- HERO SECTION - OTIMIZADA ---------- */
+        .hero {
+            min-height: 90vh; /* MELHORIA: Levemente maior */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: #030305;
+            isolation: isolate; /* MELHORIA: Melhora empilhamento de camadas */
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            will-change: transform; /* MELHORIA: Otimização de performance */
+        }
+
+        /* Overlay mais sofisticado */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.9) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-shadow: 0 0 30px rgba(0,0,0,0.8);
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            color: white;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 40px rgba(255,255,255,0.2);
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-content p {
+            font-size: clamp(1.2rem, 4vw, 1.8rem);
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 3rem;
+            font-weight: 300;
+            text-shadow: 0 0 20px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        /* Botão premium */
+        .btn-outline {
+            display: inline-block;
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 14px 48px;
+            border-radius: 50px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: var(--transition-smooth);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 30px rgba(255,255,255,0.1);
+            animation: fadeInUp 1s ease 0.4s both;
+            cursor: pointer;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #0a0a0f;
+            border-color: white;
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(255,255,255,0.4);
+        }
+
+        /* ---------- SEÇÃO ARTISTAS - CARDS REFINADOS ---------- */
+        .artistas-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .artista-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--border-light);
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .artista-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 50px -15px rgba(0, 0, 0, 0.8), 0 0 0 1px var(--border-hover);
+            background: var(--bg-card-hover);
+        }
+
+        .artista-img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            display: block;
+            background-color: #1a1a1f;
+            border-bottom: 1px solid var(--border-light);
+            transition: transform 0.6s ease;
+        }
+
+        .artista-card:hover .artista-img {
+            transform: scale(1.02); /* MELHORIA: Zoom sutil na imagem */
+        }
+
+        .card-content {
+            padding: 24px 22px 26px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .artista-nome {
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 6px;
+            color: var(--text-primary);
+        }
+
+        .artista-estilo {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: auto;
+        }
+
+        .social-minimal {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-light);
+            color: var(--text-primary);
+            padding: 8px 16px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            backdrop-filter: blur(4px);
+            flex: 1 0 auto;
+            text-align: center;
+        }
+
+        .social-minimal:hover {
+            background: #ffffff;
+            border-color: #ffffff;
+            color: #0a0a0f;
+            transform: translateY(-2px);
+        }
+
+        /* ---------- SEÇÃO SOBRE - REFINADA ---------- */
+        .sobre-bloco {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 36px;
+            padding: clamp(40px, 8vw, 70px) clamp(30px, 6vw, 80px);
+            text-align: center;
+            box-shadow: 0 30px 50px -25px rgba(0, 0, 0, 0.6);
+            border: 1px solid var(--border-light);
+        }
+
+        .sobre-bloco p {
+            font-size: clamp(1.3rem, 4vw, 1.9rem);
+            font-weight: 300;
+            color: var(--text-primary);
+            line-height: 1.5;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .sobre-bloco br {
+            display: none; /* MELHORIA: Responsividade do texto */
+        }
+
+        /* ---------- RODAPÉ - REFINADO ---------- */
+        footer {
+            background: var(--bg-secondary);
+            padding: 50px 0 30px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        .footer-logo {
+            font-weight: 700;
+            font-size: 1.8rem;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #fff 0%, #ccc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-info {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-info a, .footer-info span {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 400;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease, opacity 0.3s ease;
+            opacity: 0.9;
+        }
+
+        .footer-info a:hover {
+            border-bottom: 1px solid var(--text-primary);
+            opacity: 1;
+        }
+
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-tertiary);
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* ---------- ANIMAÇÕES NOVAS ---------- */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s cubic-bezier(0.2, 0.9, 0.3, 1), transform 1s cubic-bezier(0.2, 0.9, 0.3, 1);
+            will-change: opacity, transform; /* MELHORIA: Performance */
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero .fade-up {
+            opacity: 1;
+            transform: none;
+            transition: none;
+        }
+
+        /* ---------- RESPONSIVIDADE AVANÇADA ---------- */
+        @media (max-width: 1200px) {
+            .artistas-grid {
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 1100px) {
+            .artistas-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 800px) {
+            .artistas-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.4rem;
+                margin-bottom: 2rem;
+            }
+            
+            .container {
+                padding: 0 30px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .hero {
+                min-height: 80vh;
+            }
+            
+            .btn-outline {
+                padding: 12px 32px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .artistas-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .container {
+                padding: 0 20px;
+            }
+            
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .footer-info {
+                justify-content: center;
+                gap: 20px;
+            }
+            
+            h2::after {
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60px;
+            }
+            
+            h2 {
+                text-align: center;
+                display: block;
+            }
+        }
+
+        /* MELHORIA: Foco acessível para teclado */
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid white;
+            outline-offset: 4px;
+            border-radius: 4px;
+        }
+
+        /* MELHORIA: Redução de movimento para usuários com preferência */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO SECTION COM VÍDEO DE FUNDO -->
+    <section class="hero" id="inicio">
+        <video class="hero-video" autoplay muted loop playsinline poster="img/fallback-hero.jpg">
+            <source src="video/compilado-artistas.mp4" type="video/mp4">
+            <img src="img/fallback-hero.jpg" alt="Fabricio Produções" style="width:100%; height:100%; object-fit:cover;">
+        </video>
+        
+        <div class="hero-overlay" aria-hidden="true"></div>
+        
+        <div class="hero-content">
+            <h1 class="fade-up" style="opacity:1; transform:none;">FABRICIO PRODUÇÕES</h1>
+            <p class="fade-up" style="opacity:1; transform:none;">Contrate Artistas para Seu Evento</p>
+            <a href="#artistas" class="btn-outline fade-up" style="opacity:1; transform:none;" aria-label="Ver artistas do casting">Ver Artistas</a>
+        </div>
+    </section>
+
+    <!-- SEÇÃO ARTISTAS -->
+    <section id="artistas" aria-labelledby="artistas-title">
+        <div class="container">
+            <h2 id="artistas-title" class="fade-up">Artistas</h2>
+            <div class="artistas-grid" id="artistasGrid"></div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE -->
+    <section id="sobre" aria-labelledby="sobre-title">
+        <div class="container">
+            <h2 id="sobre-title" class="fade-up" style="display: none;">Sobre</h2> <!-- Escondido visualmente mas acessível -->
+            <div class="sobre-bloco fade-up">
+                <p>Hub oficial de artistas e intermediação de shows. Curadoria premium que conecta os melhores talentos da música a eventos de alto padrão. Excelência e satisfação do público em cada apresentação.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">FABRICIO</div>
+                <div class="footer-info">
+                    <a href="https://instagram.com/fabricioproducoes" target="_blank" rel="noopener noreferrer" aria-label="Instagram da produtora">Instagram</a>
+                    <span>fabriciodesigner82@gmail.com</span>
+                    <span>Santana, BA</span>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2026 Fabricio Produções. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const ARTISTAS = [
+            {
+                nome: "Ailson & Ailsinho",
+                estilo: "Sertanejo / Forró",
+                insta: "https://www.instagram.com/ailsoneailsinho/",
+                whats: "https://wa.me/5577981050767?text=Estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site%20FABRICIO%20PRODU%C3%87%C3%95ES%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20para%20contratar%20a%20dupla%20Ailson%20%26%20Ailsinho%20para%20um%20evento.%0A%0APoderiam%20me%20informar%20disponibilidade%20de%20agenda%2C%20cach%C3%AA%20e%20condi%C3%A7%C3%B5es%20de%20contrata%C3%A7%C3%A3o%3F%0A%0AFico%20no%20aguardo.%20Obrigado!",
+                youtube: "https://www.youtube.com/@ailsoneailsinho",
+                img: "artista1.jpg"
+            },
+            {
+                nome: "Don Black",
+                estilo: "Rap & Trap",
+                insta: "https://instagram.com/don.black",
+                whats: "https://wa.me/5511888888888",
+                youtube: "https://youtube.com/@donblack",
+                img: "artista2.jpg"
+            },
+            {
+                nome: "Sam Skylar",
+                estilo: "Rock alternativo",
+                insta: "https://instagram.com/sam.skylar",
+                whats: "https://wa.me/5511777777777",
+                youtube: "https://youtube.com/@samskylar",
+                img: "artista3.jpg"
+            },
+            {
+                nome: "Iza Forte",
+                estilo: "MPB / Soul",
+                insta: "https://instagram.com/iza.forte",
+                whats: "https://wa.me/5511666666666",
+                youtube: "https://youtube.com/@izaforte",
+                img: "artista4.jpg"
+            },
+            {
+                nome: "Pablo Vibe",
+                estilo: "Latin fusion",
+                insta: "https://instagram.com/pablo.vibe",
+                whats: "https://wa.me/5511555555555",
+                youtube: "https://youtube.com/@pablovibe",
+                img: "artista5.jpg"
+            },
+            {
+                nome: "Tina Flow",
+                estilo: "R&B / Hip Hop",
+                insta: "https://instagram.com/tina.flow",
+                whats: "https://wa.me/5511444444444",
+                youtube: "https://youtube.com/@tinaflow",
+                img: "artista6.jpg"
+            },
+            {
+                nome: "Guto Rei",
+                estilo: "Sertanejo",
+                insta: "https://instagram.com/guto.rei",
+                whats: "https://wa.me/5511333333333",
+                youtube: "https://youtube.com/@gutorei",
+                img: "artista7.jpg"
+            },
+            {
+                nome: "Mayra Beats",
+                estilo: "DJ / produção",
+                insta: "https://instagram.com/mayra.beats",
+                whats: "https://wa.me/5511222222222",
+                youtube: "https://youtube.com/@mayrabeats",
+                img: "artista8.jpg"
+            },
+            {
+                nome: "Fabio Freq",
+                estilo: "House music",
+                insta: "https://instagram.com/fabio.freq",
+                whats: "https://wa.me/5511111111111",
+                youtube: "https://youtube.com/@fabiofreq",
+                img: "artista9.jpg"
+            },
+            {
+                nome: "Nina Luz",
+                estilo: "Indie / Folk",
+                insta: "https://instagram.com/nina.luz",
+                whats: "https://wa.me/5511000000000",
+                youtube: "https://youtube.com/@ninaluz",
+                img: "artista10.jpg"
+            }
+        ];
+
+        (function renderArtistas() {
+            document.addEventListener('DOMContentLoaded', function() {
+                const grid = document.getElementById('artistasGrid');
+                
+                if (!grid) {
+                    console.warn('Elemento #artistasGrid não encontrado.');
+                    return;
+                }
+
+                grid.innerHTML = '';
+
+                ARTISTAS.forEach(artista => {
+                    const card = document.createElement('div');
+                    card.className = 'artista-card fade-up';
+                    
+                    const imagemPath = `img/${artista.img}`;
+                    
+                    card.innerHTML = `
+                        <img src="${imagemPath}" 
+                             alt="Foto do artista ${artista.nome}" 
+                             class="artista-img" 
+                             loading="lazy"
+                             onerror="this.onerror=null; this.src='https://via.placeholder.com/800x800/1a1a1f/666666?text=${encodeURIComponent(artista.nome)}'">
+                        <div class="card-content">
+                            <div class="artista-nome">${artista.nome}</div>
+                            <div class="artista-estilo">${artista.estilo}</div>
+                            <div class="social-links">
+                                <a href="${artista.insta}" target="_blank" rel="noopener noreferrer" class="social-minimal">Instagram</a>
+                                <a href="${artista.whats}" target="_blank" rel="noopener noreferrer" class="social-minimal">Contato para Shows</a>
+                                <a href="${artista.youtube}" target="_blank" rel="noopener noreferrer" class="social-minimal">YouTube</a>
+                            </div>
+                        </div>
+                    `;
+                    
+                    grid.appendChild(card);
+                });
+
+                const faders = document.querySelectorAll('.fade-up:not(.hero .fade-up)');
+                
+                if (faders.length === 0) return;
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { 
+                    threshold: 0.2,
+                    rootMargin: '0px 0px -20px 0px'
+                });
+
+                faders.forEach(el => observer.observe(el));
+            });
+        })();
+    </script>
+</body>
+</html>
